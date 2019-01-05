@@ -31,15 +31,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var window: NSWindow!
 	@IBOutlet weak var freezeWindow: NSWindow!
 	@IBOutlet weak var imageView: NSImageView!
+	@IBOutlet weak var freezeButton: NSButton!
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		self.window.level = .screenSaver
 		self.window.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.level = .screenSaver
+		self.freezeWindow.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
+		self.freezeWindow.contentView?.wantsLayer = true
+		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.black.cgColor
+		Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.bringWindowFront(_:)), userInfo: nil, repeats: true)
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
+	}
+	
+	@objc func bringWindowFront(_ sender: Any?) {
+		if self.freezeButton.state == .on {
+			self.freezeWindow.setFrame(NSScreen.screens.last?.frame ?? CGRect.zero, display: false)
+			self.freezeWindow.orderFrontRegardless()
+		}
+		self.window.orderFrontRegardless()
 	}
 	
 	@IBAction func toggle(_ button: NSButton) {
