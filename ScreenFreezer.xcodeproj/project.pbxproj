@@ -19,12 +19,12 @@
 		A75C1F2121E0A4BA00F0500E /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutRecognizer.swift; sourceTree = "<group>"; };
 		A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSKeyboardShortcut.swift; sourceTree = "<group>"; };
-		A7F8EEC421E08AE7004591EA /* MonitorFreezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorFreezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F8EEC421E08AE7004591EA /* ScreenFreezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenFreezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F8EEC721E08AE7004591EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F8EEC921E08AE9004591EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7F8EECC21E08AE9004591EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A7F8EECE21E08AE9004591EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7F8EECF21E08AE9004591EA /* MonitorFreezer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MonitorFreezer.entitlements; sourceTree = "<group>"; };
+		A7F8EECF21E08AE9004591EA /* ScreenFreezer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenFreezer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 		A7F8EEBB21E08AE7004591EA = {
 			isa = PBXGroup;
 			children = (
-				A7F8EEC621E08AE7004591EA /* MonitorFreezer */,
+				A7F8EEC621E08AE7004591EA /* ScreenFreezer */,
 				A7F8EEC521E08AE7004591EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,12 +49,12 @@
 		A7F8EEC521E08AE7004591EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7F8EEC421E08AE7004591EA /* MonitorFreezer.app */,
+				A7F8EEC421E08AE7004591EA /* ScreenFreezer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A7F8EEC621E08AE7004591EA /* MonitorFreezer */ = {
+		A7F8EEC621E08AE7004591EA /* ScreenFreezer */ = {
 			isa = PBXGroup;
 			children = (
 				A7F8EEC721E08AE7004591EA /* AppDelegate.swift */,
@@ -64,17 +64,17 @@
 				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
 				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
 				A7F8EECE21E08AE9004591EA /* Info.plist */,
-				A7F8EECF21E08AE9004591EA /* MonitorFreezer.entitlements */,
+				A7F8EECF21E08AE9004591EA /* ScreenFreezer.entitlements */,
 			);
-			path = MonitorFreezer;
+			path = ScreenFreezer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7F8EEC321E08AE7004591EA /* MonitorFreezer */ = {
+		A7F8EEC321E08AE7004591EA /* ScreenFreezer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7F8EED221E08AE9004591EA /* Build configuration list for PBXNativeTarget "MonitorFreezer" */;
+			buildConfigurationList = A7F8EED221E08AE9004591EA /* Build configuration list for PBXNativeTarget "ScreenFreezer" */;
 			buildPhases = (
 				A7F8EEC021E08AE7004591EA /* Sources */,
 				A7F8EEC121E08AE7004591EA /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = MonitorFreezer;
+			name = ScreenFreezer;
 			productName = MonitorFreezer;
-			productReference = A7F8EEC421E08AE7004591EA /* MonitorFreezer.app */;
+			productReference = A7F8EEC421E08AE7004591EA /* ScreenFreezer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A7F8EEBF21E08AE7004591EA /* Build configuration list for PBXProject "MonitorFreezer" */;
+			buildConfigurationList = A7F8EEBF21E08AE7004591EA /* Build configuration list for PBXProject "ScreenFreezer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7F8EEC321E08AE7004591EA /* MonitorFreezer */,
+				A7F8EEC321E08AE7004591EA /* ScreenFreezer */,
 			);
 		};
 /* End PBXProject section */
@@ -279,17 +279,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MonitorFreezer/MonitorFreezer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/ScreenFreezer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P4VFUVY4MS;
-				INFOPLIST_FILE = MonitorFreezer/Info.plist;
+				INFOPLIST_FILE = ScreenFreezer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.MonitorFreezer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.ScreenFreezer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -299,17 +299,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MonitorFreezer/MonitorFreezer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/ScreenFreezer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P4VFUVY4MS;
-				INFOPLIST_FILE = MonitorFreezer/Info.plist;
+				INFOPLIST_FILE = ScreenFreezer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.MonitorFreezer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.ScreenFreezer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -318,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7F8EEBF21E08AE7004591EA /* Build configuration list for PBXProject "MonitorFreezer" */ = {
+		A7F8EEBF21E08AE7004591EA /* Build configuration list for PBXProject "ScreenFreezer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7F8EED021E08AE9004591EA /* Debug */,
@@ -327,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7F8EED221E08AE9004591EA /* Build configuration list for PBXNativeTarget "MonitorFreezer" */ = {
+		A7F8EED221E08AE9004591EA /* Build configuration list for PBXNativeTarget "ScreenFreezer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A7F8EED321E08AE9004591EA /* Debug */,
