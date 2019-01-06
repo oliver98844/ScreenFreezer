@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Carbon.HIToolbox.Events
 
 extension NSButton {
 	var titleTextColor : NSColor {
@@ -32,8 +33,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var freezeWindow: NSWindow!
 	@IBOutlet weak var imageView: NSImageView!
 	@IBOutlet weak var freezeButton: NSButton!
+	var shortcutRecognizer: PressShortcutRecognizer!
+	var shortcutHolder: Any?
 	
-	func applicationDidFinishLaunching(_ aNotification: Notification) {
+	private func setupUI() {
 		self.window.level = .screenSaver
 		self.window.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.level = .screenSaver
@@ -41,6 +44,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.freezeWindow.contentView?.wantsLayer = true
 		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.black.cgColor
 		Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.bringWindowFront(_:)), userInfo: nil, repeats: true)
+	}
+	
+	private func setupKeyboardShortcut() {
+		self.shortcutRecognizer = PressShortcutRecognizer { [weak self] in
+			guard let button = self?.freezeButton else {
+				return
+			}
+			button.state = (button.state == .off) ? .on : .off
+			self?.toggle(button)
+		}
+		guard let shortcut = try? CGSKeyboardShortcut(identifier: CGSKeyboardShortcut.Identifier(0xE0000001), keyCode: UInt16(kVK_ANSI_F), modifierFlags: [.maskShift, .maskControl]) else {
+			NSLog("Failed to create shortcut")
+			return
+		}
+		self.shortcutHolder = self.shortcutRecognizer.bind(to: shortcut)
+	}
+	
+	func applicationDidFinishLaunching(_ aNotification: Notification) {
+		self.setupUI()
+		self.setupKeyboardShortcut()
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {

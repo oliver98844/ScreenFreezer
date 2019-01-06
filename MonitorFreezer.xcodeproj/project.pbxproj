@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A75C1F2221E0A4BA00F0500E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A75C1F2121E0A4BA00F0500E /* Credits.rtf */; };
+		A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */; };
+		A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */; };
 		A7F8EEC821E08AE7004591EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F8EEC721E08AE7004591EA /* AppDelegate.swift */; };
 		A7F8EECA21E08AE9004591EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F8EEC921E08AE9004591EA /* Assets.xcassets */; };
 		A7F8EECD21E08AE9004591EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F8EECB21E08AE9004591EA /* MainMenu.xib */; };
@@ -15,6 +17,8 @@
 
 /* Begin PBXFileReference section */
 		A75C1F2121E0A4BA00F0500E /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutRecognizer.swift; sourceTree = "<group>"; };
+		A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSKeyboardShortcut.swift; sourceTree = "<group>"; };
 		A7F8EEC421E08AE7004591EA /* MonitorFreezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonitorFreezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F8EEC721E08AE7004591EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F8EEC921E08AE9004591EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				A7F8EEC721E08AE7004591EA /* AppDelegate.swift */,
+				A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */,
+				A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */,
 				A7F8EEC921E08AE9004591EA /* Assets.xcassets */,
 				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
 				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
@@ -135,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F8EEC821E08AE7004591EA /* AppDelegate.swift in Sources */,
+				A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */,
+				A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
