@@ -48,17 +48,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	private func setupKeyboardShortcut() {
 		self.shortcutRecognizer = PressShortcutRecognizer { [weak self] in
-			guard let button = self?.freezeButton else {
-				return
-			}
-			button.state = (button.state == .off) ? .on : .off
-			self?.toggle(button)
+			self?._toggleFreeze()
 		}
 		guard let shortcut = try? CGSKeyboardShortcut(identifier: CGSKeyboardShortcut.Identifier(0xE0000001), keyCode: UInt16(kVK_ANSI_F), modifierFlags: [.maskShift, .maskControl]) else {
 			NSLog("Failed to create shortcut")
 			return
 		}
 		self.shortcutHolder = self.shortcutRecognizer.bind(to: shortcut)
+	}
+	
+	@objc private func _toggleFreeze() {
+		self.freezeButton.state = (self.freezeButton.state == .off) ? .on : .off
+		self.toggle(self.freezeButton)
 	}
 	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -76,6 +77,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			self.freezeWindow.orderFrontRegardless()
 		}
 		self.window.orderFrontRegardless()
+	}
+	
+	@IBAction func toggleFreeze(_ sender: Any?) {
+		self.perform(#selector(self._toggleFreeze), with: nil, afterDelay: 0.0)
 	}
 	
 	@IBAction func toggle(_ button: NSButton) {

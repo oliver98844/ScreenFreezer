@@ -36,6 +36,12 @@
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Toggle Freeze" keyEquivalent="F" id="3xO-3r-kY8">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                <connections>
+                                    <action selector="toggleFreeze:" target="Voe-Tx-rLC" id="qY3-Ft-KhN"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
                             <menuItem title="Quit MonitorFreezer" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
