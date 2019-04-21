@@ -38,6 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	private func setupUI() {
 		self.window.level = .screenSaver
+		self.window.collectionBehavior = [.moveToActiveSpace]
 		self.window.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.level = .screenSaver
 		self.freezeWindow.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
