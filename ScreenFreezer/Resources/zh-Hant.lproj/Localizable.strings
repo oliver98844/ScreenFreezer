@@ -3,7 +3,7 @@
 "Freeze" = "凍結螢幕";
 "Preferences" = "偏好設定";
 "Shortcut:" = "快速鍵：";
-"Press to record shortcut" = "點一下來錄製快速鍵";
+"Recording shortcut..." = "錄製快速鍵豬中...";
 
 /* MainMenu.xib - Main Menu */
 "About ScreenFreezer" = "關於 ScreenFreezer";

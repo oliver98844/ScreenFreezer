@@ -33,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var freezeWindow: NSWindow!
 	@IBOutlet weak var imageView: NSImageView!
 	@IBOutlet weak var freezeButton: NSButton!
+	@IBOutlet weak var freezeMenuItem: NSMenuItem!
 	@IBOutlet weak var preferencesWindow: NSWindow!
 	@IBOutlet weak var keyboardShortcutView: KeyboardShortcutView!
 	var shortcutRecognizer: PressShortcutRecognizer!
@@ -42,12 +43,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.window.level = .screenSaver
 		self.window.collectionBehavior = [.moveToActiveSpace]
 		self.window.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
+		
 		self.freezeWindow.level = .screenSaver
 		self.freezeWindow.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.contentView?.wantsLayer = true
 		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.clear.cgColor
+		
 		self.keyboardShortcutView.delegate = self
 		self.keyboardShortcutView.font = NSFont.systemFont(ofSize: 25)
+		self.keyboardShortcutView.shortcut = AppConfig.shared.shortcut.shortcutViewPair
+		
 		Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.bringWindowFront(_:)), userInfo: nil, repeats: true)
 	}
 	
@@ -55,10 +60,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.shortcutRecognizer = PressShortcutRecognizer { [weak self] in
 			self?._toggleFreeze()
 		}
-		guard let shortcut = try? CGSKeyboardShortcut(identifier: CGSKeyboardShortcut.Identifier(0xE0000001), keyCode: UInt16(kVK_ANSI_F), modifierFlags: [.maskShift, .maskControl]) else {
+		for k in CGSKeyboardShortcut.all {
+			k.invalidate()
+		}
+		guard let shortcut = AppConfig.shared.shortcut.keyboardShortcut else {
 			NSLog("Failed to create shortcut")
 			return
 		}
+		self.freezeMenuItem.keyEquivalentModifierMask = NSEvent.ModifierFlags(rawValue: UInt(shortcut.modifierFlags.rawValue))
+		self.freezeMenuItem.keyEquivalent = shortcut.keyCode.characters
 		self.shortcutHolder = self.shortcutRecognizer.bind(to: shortcut)
 	}
 	
@@ -152,7 +162,12 @@ extension AppDelegate : KeyboardShortcutViewDelegate {
 	
 	
 	func keyboardShortcutViewDidEndRecording(_ keyboardShortcutView: KeyboardShortcutView) {
-		// TODO: 
+		guard let shortcut = keyboardShortcutView.shortcutStruct else {
+			keyboardShortcutView.shortcut = AppConfig.shared.shortcut.shortcutViewPair
+			return
+		}
+		AppConfig.shared.shortcut = shortcut
+		setupKeyboardShortcut()
 	}
 }
 

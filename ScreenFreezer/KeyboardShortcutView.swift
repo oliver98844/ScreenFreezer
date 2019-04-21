@@ -707,7 +707,7 @@ open class KeyboardShortcutView: NSControl, NSSecureCoding, NSAccessibilityButto
 
     /// End recording, resign first responder, and notify the `delegate`/`target`.
     public func endRecording() {
-        if !self.isRecording { return }
+//        if !self.isRecording { return }
         self.inputModifiers = []
         self.isRecording = false
         

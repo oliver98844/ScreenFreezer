@@ -3,7 +3,7 @@
 "Freeze" = "Freeze";
 "Preferences" = "Preferences";
 "Shortcut:" = "Shortcut:";
-"Press to record shortcut" = "Press to record shortcut";
+"Recording shortcut..." = "Recording shortcut...";
 
 /* MainMenu.xib - Main Menu */
 "About ScreenFreezer" = "About ScreenFreezer";
