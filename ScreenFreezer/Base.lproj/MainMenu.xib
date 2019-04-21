@@ -61,6 +61,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
                         <items>
+                            <menuItem title="Close Window" keyEquivalent="w" id="gHH-Oz-nvI">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="Mjm-vn-72k"/>
+                                </connections>
+                            </menuItem>
                             <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
