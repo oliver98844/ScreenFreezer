@@ -100,7 +100,7 @@ public final class TapHoldShortcutRecognizer: ShortcutRecognizer {
 public extension ShortcutRecognizer {
     
     /// Bind a recognizer to a shortcut. Retain the returned object to ensure the binding.
-    public func bind(to shortcut: CGSKeyboardShortcut) -> Any {
+    func bind(to shortcut: CGSKeyboardShortcut) -> Any {
         let x = NotificationCenter.default.addObserver(forName: CGSKeyboardShortcut.pressedNotification, object: shortcut, queue: nil) { _ in
             self.keyDown()
         }

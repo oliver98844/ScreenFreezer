@@ -254,6 +254,10 @@ public final class CGSKeyboardShortcut: Hashable {
     public var hashValue: Int {
         return ObjectIdentifier(self).hashValue
     }
+	
+	public func hash(into hasher: inout Hasher) {
+		hasher.combine(ObjectIdentifier(self))
+	}
     
     public static func ==(lhs: CGSKeyboardShortcut, rhs: CGSKeyboardShortcut) -> Bool {
         return lhs.identifier == rhs.identifier
@@ -276,25 +280,25 @@ extension CGEventFlags: Hashable, Codable {
 
 public extension CGEventFlags {
     /// Convert `NSEvent.ModifierFlags` into `CGEventFlags`.
-    public init(_ flags: NSEvent.ModifierFlags) {
+    init(_ flags: NSEvent.ModifierFlags) {
         self.init(rawValue: UInt64(flags.rawValue))
     }
     
     /// Used to retrieve only the device-independent modifier flags, allowing
     /// applications to mask off the device-dependent modifier flags, including
     /// event coalescing information.
-    public static let maskDeviceIndependentFlags = CGEventFlags(rawValue: 0x00000000ffff0000)
+    static let maskDeviceIndependentFlags = CGEventFlags(rawValue: 0x00000000ffff0000)
     
     /// Used to retrieve only the shortcut-usable modifier flags.
-    public static let maskShortcutFlags = CGEventFlags(rawValue: 0x0000000000ff0000)
+    static let maskShortcutFlags = CGEventFlags(rawValue: 0x0000000000ff0000)
     
     /// Used to retrieve only the user transient modifier flags (i.e. no caps-lock).
-    public static let maskUserFlags: CGEventFlags = [.maskCommand, .maskControl, .maskShift, .maskAlternate]
+    static let maskUserFlags: CGEventFlags = [.maskCommand, .maskControl, .maskShift, .maskAlternate]
 }
 
 public extension NSEvent.ModifierFlags {
     /// Convert `CGEventFlags` into `NSEvent.ModifierFlags`.
-    public init(_ flags: CGEventFlags) {
+    init(_ flags: CGEventFlags) {
         self.init(rawValue: UInt(flags.rawValue))
     }
 }
@@ -308,7 +312,7 @@ public extension NSEvent.ModifierFlags {
 public extension CGKeyCode {
     
     /// Is this virtual key code actually a function key?
-    public var isFunctionKey: Bool {
+    var isFunctionKey: Bool {
         switch Int(self) {
         // Virtual key constants are *NOT* sequential like ASCII.
         case kVK_F1, kVK_F2, kVK_F3, kVK_F4, kVK_F5, kVK_F6, kVK_F7, kVK_F8,
@@ -324,7 +328,7 @@ public extension CGKeyCode {
     ///
     /// Note: dead keys (dead key `´` is usually used to produce live key `é`)
     /// are not considered.
-    public var characters: String {
+    var characters: String {
         if let special = CGKeyCode._special[Int(self)] { return special }
         
         let source = TISCopyCurrentASCIICapableKeyboardLayoutInputSource().takeUnretainedValue()
@@ -398,7 +402,7 @@ public extension CGKeyCode {
 public extension CGEventFlags {
     
     /// The human-readable representation of the event modifier flags.
-    public var characters: String {
+    var characters: String {
         var string = ""
         if self.contains(.maskAlphaShift) { string.append("⇪") }
         if self.contains(.maskHelp) { string.append("?⃝") }
@@ -412,7 +416,7 @@ public extension CGEventFlags {
 public extension NSEvent.ModifierFlags {
     
     /// The human-readable representation of the event modifier flags.
-    public var characters: String {
+    var characters: String {
         return CGEventFlags(self).characters
     }
 }
