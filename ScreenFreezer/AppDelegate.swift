@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MonitorFreezer
+//  ScreenFreezer
 //
 //  Created by Oliver Huang on 2019/1/5.
 //  Copyright © 2019年 Oliver Huang. All rights reserved.
@@ -33,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	@IBOutlet weak var freezeWindow: NSWindow!
 	@IBOutlet weak var imageView: NSImageView!
 	@IBOutlet weak var freezeButton: NSButton!
+	@IBOutlet weak var preferencesWindow: NSWindow!
+	@IBOutlet weak var keyboardShortcutView: KeyboardShortcutView!
 	var shortcutRecognizer: PressShortcutRecognizer!
 	var shortcutHolder: Any?
 	
@@ -44,6 +46,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.freezeWindow.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.contentView?.wantsLayer = true
 		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.black.cgColor
+		self.keyboardShortcutView.placeholderString = "點一下來錄製快速鍵"
+		self.keyboardShortcutView.delegate = self
+		self.keyboardShortcutView.font = NSFont.systemFont(ofSize: 25)
 		Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.bringWindowFront(_:)), userInfo: nil, repeats: true)
 	}
 	
@@ -78,6 +83,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			self.freezeWindow.orderFrontRegardless()
 		}
 		self.window.orderFrontRegardless()
+	}
+	
+	@IBAction func showPreferences(_ sender: Any?) {
+		self.preferencesWindow.orderFront(sender)
 	}
 	
 	@IBAction func toggleFreeze(_ sender: Any?) {
@@ -130,6 +139,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			return nil
 		}
 		return NSImage(data: data)
+	}
+}
+
+extension AppDelegate : KeyboardShortcutViewDelegate {
+	func keyboardShortcutViewShouldBeginRecording(_ keyboardShortcutView: KeyboardShortcutView) -> Bool {
+		return true
+	}
+	
+	func keyboardShortcutView(_ keyboardShortcutView: KeyboardShortcutView, canRecordShortcut shortcut: KeyboardShortcutView.Pair) -> Bool {
+		return true
+	}
+	
+	
+	func keyboardShortcutViewDidEndRecording(_ keyboardShortcutView: KeyboardShortcutView) {
+		// TODO: 
 	}
 }
 

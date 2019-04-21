@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7446446226C13F100AC7196 /* KeyboardShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */; };
 		A75C1F2221E0A4BA00F0500E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A75C1F2121E0A4BA00F0500E /* Credits.rtf */; };
 		A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */; };
 		A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutView.swift; sourceTree = "<group>"; };
 		A75C1F2121E0A4BA00F0500E /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutRecognizer.swift; sourceTree = "<group>"; };
 		A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSKeyboardShortcut.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				A7F8EEC721E08AE7004591EA /* AppDelegate.swift */,
 				A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */,
 				A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */,
+				A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */,
 				A7F8EEC921E08AE9004591EA /* Assets.xcassets */,
 				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
 				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F8EEC821E08AE7004591EA /* AppDelegate.swift in Sources */,
+				A7446446226C13F100AC7196 /* KeyboardShortcutView.swift in Sources */,
 				A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */,
 				A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */,
 			);
@@ -165,6 +169,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -226,6 +231,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -289,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.ScreenFreezer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -309,7 +315,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverhuang.ScreenFreezer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

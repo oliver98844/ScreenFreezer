@@ -1,6 +1,6 @@
 //
-//  AppDelegate.swift
-//  MonitorFreezer
+//  CGSKeyboardShortcut.swift
+//  ScreenFreezer
 //
 // From https://gist.github.com/avaidyam/32975976c23dd3b38336f22d971f5eaa
 
