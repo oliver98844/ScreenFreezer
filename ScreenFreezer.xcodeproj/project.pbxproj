@@ -45,6 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7B4B0E0226C599000453D41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F8EECE21E08AE9004591EA /* Info.plist */,
+				A7F8EECF21E08AE9004591EA /* ScreenFreezer.entitlements */,
+				A7F8EEC921E08AE9004591EA /* Assets.xcassets */,
+				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
+				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
+				A7446469226C520A00AC7196 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A7F8EEBB21E08AE7004591EA = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +82,7 @@
 				A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */,
 				A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */,
 				A7446462226C3F1700AC7196 /* Localization.swift */,
-				A7446469226C520A00AC7196 /* Localizable.strings */,
-				A7F8EEC921E08AE9004591EA /* Assets.xcassets */,
-				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
-				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
-				A7F8EECE21E08AE9004591EA /* Info.plist */,
-				A7F8EECF21E08AE9004591EA /* ScreenFreezer.entitlements */,
+				A7B4B0E0226C599000453D41 /* Resources */,
 			);
 			path = ScreenFreezer;
 			sourceTree = "<group>";
@@ -305,11 +313,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/ScreenFreezer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/Resources/ScreenFreezer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P4VFUVY4MS;
-				INFOPLIST_FILE = ScreenFreezer/Info.plist;
+				INFOPLIST_FILE = ScreenFreezer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -325,11 +333,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/ScreenFreezer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ScreenFreezer/Resources/ScreenFreezer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = P4VFUVY4MS;
-				INFOPLIST_FILE = ScreenFreezer/Info.plist;
+				INFOPLIST_FILE = ScreenFreezer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
