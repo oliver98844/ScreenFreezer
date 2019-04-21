@@ -32,24 +32,36 @@
                         <items>
                             <menuItem title="About ScreenFreezer" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="About ScreenFreezer"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Preferences…"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showPreferences:" target="Voe-Tx-rLC" id="WL2-hc-Mfu"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Toggle Freeze" keyEquivalent="F" id="3xO-3r-kY8">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Toggle Freeze"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="toggleFreeze:" target="Voe-Tx-rLC" id="qY3-Ft-KhN"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
                             <menuItem title="Quit ScreenFreezer" keyEquivalent="q" id="4sb-4s-VLi">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Quit ScreenFreezer"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -62,17 +74,26 @@
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
                         <items>
                             <menuItem title="Close Window" keyEquivalent="w" id="gHH-Oz-nvI">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Close Window"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="performClose:" target="-1" id="Mjm-vn-72k"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Bring All to Front"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
                                 </connections>
                             </menuItem>
                         </items>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Window"/>
+                        </userDefinedRuntimeAttributes>
                     </menu>
                 </menuItem>
                 <menuItem title="Help" id="wpr-3q-Mcd">
@@ -80,17 +101,23 @@
                     <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                         <items>
                             <menuItem title="ScreenFreezer Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="ScreenFreezer Help"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
                                 </connections>
                             </menuItem>
                         </items>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Help"/>
+                        </userDefinedRuntimeAttributes>
                     </menu>
                 </menuItem>
             </items>
             <point key="canvasLocation" x="261" y="-320"/>
         </menu>
-        <window title="ScreenFreezer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" titleVisibility="hidden" id="QvC-M9-y7g">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" titleVisibility="hidden" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="89" height="60"/>
@@ -110,6 +137,9 @@
                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Freeze"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="toggle:" target="Voe-Tx-rLC" id="i6W-Zp-TUO"/>
                         </connections>
@@ -121,6 +151,9 @@
                     <constraint firstItem="hBr-Qp-BKh" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="fyn-e6-yFa"/>
                 </constraints>
             </view>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Freeze Button"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="-5" y="-276"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="f94-lU-Igd">
@@ -145,20 +178,26 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="109" y="131" width="297" height="65"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
-            <view key="contentView" id="G95-AX-qWe">
-                <rect key="frame" x="0.0" y="0.0" width="297" height="54"/>
+            <view key="contentView" misplaced="YES" id="G95-AX-qWe">
+                <rect key="frame" x="0.0" y="0.0" width="297" height="65"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CqC-sd-9lI">
-                        <rect key="frame" x="18" y="20" width="62" height="17"/>
+                        <rect key="frame" x="18" y="20" width="61" height="17"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Shortcut:" id="eUi-gS-aMU">
                             <font key="font" usesAppearanceFont="YES"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="textLocKey" value="Shortcut:"/>
+                        </userDefinedRuntimeAttributes>
                     </textField>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="kCr-LQ-n5U" customClass="KeyboardShortcutView" customModule="ScreenFreezer" customModuleProvider="target">
-                        <rect key="frame" x="86" y="20" width="191" height="14"/>
+                        <rect key="frame" x="85" y="20" width="192" height="14"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocKey" value="Press to record shortcut"/>
+                        </userDefinedRuntimeAttributes>
                     </customView>
                 </subviews>
                 <constraints>
@@ -171,6 +210,9 @@
                     <constraint firstItem="kCr-LQ-n5U" firstAttribute="leading" secondItem="CqC-sd-9lI" secondAttribute="trailing" constant="8" id="zHV-f8-5kG"/>
                 </constraints>
             </view>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="titleLocKey" value="Preferences"/>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="443.5" y="-167.5"/>
         </window>
     </objects>

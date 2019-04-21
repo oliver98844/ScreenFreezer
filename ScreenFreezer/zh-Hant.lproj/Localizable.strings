@@ -1,0 +1,21 @@
+/* MainMenu.xib */
+"Freeze Button" = "凍結按鈕";
+"Freeze" = "凍結螢幕";
+"Preferences" = "偏好設定";
+"Shortcut:" = "快速鍵：";
+"Press to record shortcut" = "點一下來錄製快速鍵";
+
+/* MainMenu.xib - Main Menu */
+"About ScreenFreezer" = "關於 ScreenFreezer";
+"Preferences…" = "偏好設定…";
+"Toggle Freeze" = "凍結 / 取消凍結螢幕";
+"Quit ScreenFreezer" = "結束 ScreenFreezer";
+
+/* MainMenu.xib - Window Menu */
+"Window" = "視窗";
+"Close Window" = "關閉視窗";
+"Bring All to Front" = "將此程式所有視窗移至最前";
+
+/* MainMenu.xib - Help Menu */
+"Help" = "輔助說明";
+"ScreenFreezer Help" = "ScreenFreezer 輔助說明";

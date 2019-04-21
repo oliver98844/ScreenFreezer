@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A7446446226C13F100AC7196 /* KeyboardShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */; };
+		A7446463226C3F1700AC7196 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7446462226C3F1700AC7196 /* Localization.swift */; };
+		A7446467226C520A00AC7196 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7446469226C520A00AC7196 /* Localizable.strings */; };
 		A75C1F2221E0A4BA00F0500E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A75C1F2121E0A4BA00F0500E /* Credits.rtf */; };
 		A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */; };
 		A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */; };
@@ -18,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutView.swift; sourceTree = "<group>"; };
+		A7446462226C3F1700AC7196 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		A7446468226C520A00AC7196 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A744646A226C521000AC7196 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A75C1F2121E0A4BA00F0500E /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutRecognizer.swift; sourceTree = "<group>"; };
 		A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSKeyboardShortcut.swift; sourceTree = "<group>"; };
@@ -63,6 +68,8 @@
 				A7DE29D821E22EFB00F19323 /* CGSKeyboardShortcut.swift */,
 				A7DE29D621E22EFA00F19323 /* ShortcutRecognizer.swift */,
 				A7446445226C13F100AC7196 /* KeyboardShortcutView.swift */,
+				A7446462226C3F1700AC7196 /* Localization.swift */,
+				A7446469226C520A00AC7196 /* Localizable.strings */,
 				A7F8EEC921E08AE9004591EA /* Assets.xcassets */,
 				A75C1F2121E0A4BA00F0500E /* Credits.rtf */,
 				A7F8EECB21E08AE9004591EA /* MainMenu.xib */,
@@ -115,6 +122,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = A7F8EEBB21E08AE7004591EA;
 			productRefGroup = A7F8EEC521E08AE7004591EA /* Products */;
@@ -132,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F8EECA21E08AE9004591EA /* Assets.xcassets in Resources */,
+				A7446467226C520A00AC7196 /* Localizable.strings in Resources */,
 				A75C1F2221E0A4BA00F0500E /* Credits.rtf in Resources */,
 				A7F8EECD21E08AE9004591EA /* MainMenu.xib in Resources */,
 			);
@@ -145,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F8EEC821E08AE7004591EA /* AppDelegate.swift in Sources */,
+				A7446463226C3F1700AC7196 /* Localization.swift in Sources */,
 				A7446446226C13F100AC7196 /* KeyboardShortcutView.swift in Sources */,
 				A7DE29DB21E22EFB00F19323 /* CGSKeyboardShortcut.swift in Sources */,
 				A7DE29D921E22EFB00F19323 /* ShortcutRecognizer.swift in Sources */,
@@ -154,6 +164,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A7446469226C520A00AC7196 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7446468226C520A00AC7196 /* zh-Hant */,
+				A744646A226C521000AC7196 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A7F8EECB21E08AE9004591EA /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

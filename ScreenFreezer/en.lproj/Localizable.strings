@@ -1,0 +1,21 @@
+/* MainMenu.xib */
+"Freeze Button" = "Freeze Button";
+"Freeze" = "Freeze";
+"Preferences" = "Preferences";
+"Shortcut:" = "Shortcut:";
+"Press to record shortcut" = "Press to record shortcut";
+
+/* MainMenu.xib - Main Menu */
+"About ScreenFreezer" = "About ScreenFreezer";
+"Preferences…" = "Preferences…";
+"Toggle Freeze" = "Toggle Freeze";
+"Quit ScreenFreezer" = "Quit ScreenFreezer";
+
+/* MainMenu.xib - Window Menu */
+"Window" = "Window";
+"Close Window" = "Close Window";
+"Bring All to Front" = "Bring All to Front";
+
+/* MainMenu.xib - Help Menu */
+"Help" = "Help";
+"ScreenFreezer Help" = "ScreenFreezer Help";

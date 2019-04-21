@@ -45,8 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		self.freezeWindow.level = .screenSaver
 		self.freezeWindow.performSelector(inBackground: Selector(("_setPreventsActivation:")), with: true)
 		self.freezeWindow.contentView?.wantsLayer = true
-		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.black.cgColor
-		self.keyboardShortcutView.placeholderString = "點一下來錄製快速鍵"
+		self.freezeWindow.contentView?.layer?.backgroundColor = NSColor.clear.cgColor
 		self.keyboardShortcutView.delegate = self
 		self.keyboardShortcutView.font = NSFont.systemFont(ofSize: 25)
 		Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.bringWindowFront(_:)), userInfo: nil, repeats: true)
